@@ -22,7 +22,7 @@ public class Persona {
     private long telfMovil;
     private long telfCasa;
     private TipoUsuario tipoUsuario;
-    private Usuario usuario;
+    private Usuario usuarioP;
 
     public Persona(){
         
@@ -124,12 +124,12 @@ public class Persona {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public Usuario getUsuarioP() {
+        return usuarioP;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setUsuarioP(Usuario usuarioP) {
+        this.usuarioP = usuarioP;
     }
     
     
