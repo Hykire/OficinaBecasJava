@@ -5,10 +5,69 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Andre_Pando
  */
-public class Tutor {
+public class Tutor extends Persona {
+
+    private ArrayList<Becado> lstBecados;
+    private int idTutor;
+    private ArrayList<Cita> lstCitas;
+    public Tutor(){
+        
+    }
     
+    /**
+     * @return the idTutor
+     */
+    public int getIdTutor() {
+        return idTutor;
+    }
+
+    public Becado buscarBecado(int codBecado){
+        Becado becado1;
+        becado1 = new Becado();
+        //codigo
+        
+        return becado1;
+    }
+    /**
+     * @param idTutor the idTutor to set
+     */
+    public void setIdTutor(int idTutor) {
+        this.idTutor = idTutor;
+    }
+    
+    /**
+     * @return the lstBecados
+     */
+    public ArrayList<Becado> getLstBecados() {
+        return lstBecados;
+    }
+
+    /**
+     * @param lstBecados the lstBecados to set
+     */
+    public void setLstBecados(ArrayList<Becado> lstBecados) {
+        this.lstBecados = lstBecados;
+    }
+    
+    
+
+    /**
+     * @return the lstCitas
+     */
+    public ArrayList<Cita> getLstCitas() {
+        return lstCitas;
+    }
+
+    /**
+     * @param lstCitas the lstCitas to set
+     */
+    public void setLstCitas(ArrayList<Cita> lstCitas) {
+        this.lstCitas = lstCitas;
+    }
 }
