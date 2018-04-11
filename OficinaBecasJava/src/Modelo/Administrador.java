@@ -1,6 +1,8 @@
+package Modelo;
+
 import java.util.*;
 public class Administrador extends Persona{
-	private DateTime fechaContrato;
+	private Date fechaContrato;
 	private List<Solicitud> solicitudesAprobadas;
 	private List<Solicitud> solicitudesRechazadas;
 	
@@ -21,7 +23,7 @@ public class Administrador extends Persona{
 		this.solicitudesAprobadas = solicitudesAprobadas;
 	}
 	
-	public List<SolicitudesAprobadas> getSolicitudesAprobadas(){
+	public List<Solicitud> getSolicitudesAprobadas(){
 		return solicitudesAprobadas;
 	}
 	
@@ -29,13 +31,13 @@ public class Administrador extends Persona{
 		this.solicitudesRechazadas = solicitudesRechazadas;
 	}
 	
-	public List<SolicitudesRechazadas> getSolicitudesRechazadas(){
+	public List<Solicitud> getSolicitudesRechazadas(){
 		return solicitudesRechazadas;
 	}
 	
-	public void aprobarSolicitud(Solicitud solicitud);
+	public void aprobarSolicitud(Solicitud solicitud){};
 	
-	public void rechazarSolicitud(Solicitud solicitud);
+	public void rechazarSolicitud(Solicitud solicitud){};
 	
-	public void RegistrarBecario();
+	public void RegistrarBecario(){};
 }

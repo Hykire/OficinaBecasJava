@@ -1,6 +1,7 @@
+package Modelo;
+
 public class CoordinadorAdministrativo extends Persona{
 	
-	public CoordinadorAdministrativo(){}
-	
-	public gestionarBeca(Beca beca);
+	public void CoordinadorAdministrativo(){};
+	public void gestionarBeca(Beca beca){};
 }

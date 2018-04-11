@@ -1,6 +1,8 @@
-public class AsistenteComununicaciones extends Persona{
+package Modelo;
+
+public class AsistenteComunicaciones extends Persona{
 	
-	public AsistenteComunicaciones(){}
+	public void AsistenteComunicaciones(){}
 	
-	public publicarAnuncio(Beca beca);
+	public void publicarAnuncio(Beca beca){};
 }

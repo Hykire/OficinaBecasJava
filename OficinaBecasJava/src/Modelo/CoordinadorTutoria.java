@@ -1,3 +1,7 @@
+package Modelo;
+
+import java.util.*;
+
 public class CoordinadorTutoria extends Persona{
 	private List<Tutor> tutores;
 	
@@ -12,6 +16,6 @@ public class CoordinadorTutoria extends Persona{
 	}
 	
 	public void agregarTutor(Tutor tutor){
-		tutores.Add(tutor);
+		tutores.add(tutor);
 	}	
 }

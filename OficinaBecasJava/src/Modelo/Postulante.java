@@ -1,4 +1,6 @@
-public class Postulante extends persona{
+package Modelo;
+
+public class Postulante extends Persona{
 	
 	private float promedio;
 	private float craest;
@@ -46,6 +48,5 @@ public class Postulante extends persona{
 	
 	public int getEscala(){
 		return escala;
-	}
-	
+	}	
 }
