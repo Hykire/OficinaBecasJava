@@ -40,4 +40,8 @@ public class Administrador extends Persona{
 	public void rechazarSolicitud(Solicitud solicitud){};
 	
 	public void RegistrarBecario(){};
+        
+        public void AsignarPerfil(){
+            
+        }
 }
