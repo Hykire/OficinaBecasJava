@@ -7,10 +7,12 @@ package Modelo;
 import java.util.*;
 
 public class Documento{
+
+    
 	private int id_doc;
 	private String nombre_doc;
 	private String descripcion_doc;
-	private Date creacion_doc;
+	private Date fecha_doc;
 	private String estado_doc;
 
 	//SET
@@ -40,4 +42,17 @@ public class Documento{
 	public String getestado_doc(){
 		return estado_doc;
 	}
+        /**
+        * @return the fecha_doc
+        */
+        public Date getFecha_doc() {
+            return fecha_doc;
+         }
+
+         /**
+        * @param fecha_doc the fecha_doc to set
+        */
+        public void setFecha_doc(Date fecha_doc) {
+            this.fecha_doc = fecha_doc;
+        }
 }
