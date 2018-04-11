@@ -13,13 +13,29 @@ import java.util.Date;
  */
 public class Cita {
 
+    
+
     private int idCita;
-    private Date cita;
+    private Date fecha;
     private String descripción;
     private String Lugar;
     
     public Cita(){
         
+    }
+    
+    /**
+     * @return the fecha
+     */
+    public Date getFecha() {
+        return fecha;
+    }
+
+    /**
+     * @param fecha the fecha to set
+     */
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
     
     /**
@@ -36,19 +52,7 @@ public class Cita {
         this.idCita = idCita;
     }
 
-    /**
-     * @return the cita
-     */
-    public Date getCita() {
-        return cita;
-    }
-
-    /**
-     * @param cita the cita to set
-     */
-    public void setCita(Date cita) {
-        this.cita = cita;
-    }
+   
 
     /**
      * @return the descripción
