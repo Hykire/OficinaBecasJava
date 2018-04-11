@@ -17,14 +17,15 @@ public class Tutor extends Persona {
     private int idTutor;
     private ArrayList<Cita> lstCitas;
     public Tutor(){
-        
+        lstCitas = new ArrayList<Cita>();
+        lstBecados = new ArrayList<Becado>();
     }
     
-    /**
-     * @return the idTutor
-     */
-    public int getIdTutor() {
-        return idTutor;
+    public void añadirBecado(Becado b){
+        lstBecados.add(b);
+    }
+    public void añadirCita(Cita c){
+        lstCitas.add(c);
     }
 
     public Becado buscarBecado(int codBecado){
@@ -39,6 +40,12 @@ public class Tutor extends Persona {
      */
     public void setIdTutor(int idTutor) {
         this.idTutor = idTutor;
+    }
+    /**
+     * @return the idTutor
+     */
+    public int getIdTutor() {
+        return idTutor;
     }
     
     /**
