@@ -6,6 +6,7 @@ package Modelo;
  */
 public class Becado {
 
+    private int id_becado;
     private String nombreApoderado;
     private String dirPadre;
     private String telefPadre;
@@ -14,6 +15,15 @@ public class Becado {
     private String estadoDebe;
 
     public Becado() {
+    }
+    
+    public int getId_becado(){
+        return id_becado;
+    }
+    
+    
+    public void setId_becado(int id_becado){
+        this.id_becado = id_becado;
     }
     
     public String getNombreApoderado() {
