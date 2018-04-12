@@ -5,20 +5,24 @@ package Modelo;
  * @author MMiltonCM
  */
 public class Financiador {
-    private String idFinanciador;
+    private int id_financiador;
     private String nombre;
     private String razonSocial;
-    private String RUC;
-
+    private long RUC;
+    private String tipo_institucion;
+    private String pag_web ;
+    private String email;
+    private int telefono;
+    
     public Financiador() {
     }
     
-    public String getIdFinanciador() {
-        return idFinanciador;
+    public int getIdFinanciador() {
+        return id_financiador;
     }
 
-    public void setIdFinanciador(String idFinanciador) {
-        this.idFinanciador = idFinanciador;
+    public void setIdFinanciador(int idFinanciador) {
+        this.id_financiador = idFinanciador;
     }
 
     public String getNombre() {
@@ -37,13 +41,37 @@ public class Financiador {
         this.razonSocial = razonSocial;
     }
 
-    public String getRUC() {
+    public long getRUC() {
         return RUC;
     }
 
-    public void setRUC(String RUC) {
+    public void setRUC(long RUC) {
         this.RUC = RUC;
     }
     
+    public void setTipo_institucion(String tipo_institucion){
+        this.tipo_institucion=tipo_institucion;
+    }
+    public String getTipo_institucion(){
+        return this.tipo_institucion;
+    }
     
+    public void setPag_web(String pag_web){
+        this.pag_web=pag_web;
+    }
+    public String getPag_web(){
+        return this.pag_web;
+    }
+    public void setEmail(String email){
+        this.email=email;
+    }
+    public String getEmail(){
+        return this.email;
+    }
+    public void setTelefono(int telefono){
+        this.telefono=telefono;
+    }
+    public int getTelefono(){
+        return telefono;
+    }
 }
