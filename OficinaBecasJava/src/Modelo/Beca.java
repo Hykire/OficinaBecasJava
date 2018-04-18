@@ -27,6 +27,7 @@ public class Beca{
 	public Beca(){
 		lts_espc =new ArrayList<Especialidad>();
 		lst_doc =new ArrayList<Documento>();
+                finan = new Financiador();
 	}
 	//SET'S
 	public void setid_beca(int id_beca){
