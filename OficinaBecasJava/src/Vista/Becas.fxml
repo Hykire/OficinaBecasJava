@@ -34,7 +34,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="36.0" layoutY="253.0" text="Fecha Fin">
+                  <Label layoutX="36.0" layoutY="253.0" text="Financiador">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -47,13 +47,19 @@
                   </TableView>
                   <Label layoutX="135.0" layoutY="163.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" text="Label" />
                   <Label layoutX="135.0" layoutY="193.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" text="Label" />
-                  <Label layoutX="135.0" layoutY="223.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" text="Label" />
-                  <Label layoutX="135.0" layoutY="253.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" text="Label" />
+                  <Label layoutX="135.0" layoutY="223.0" prefHeight="17.0" prefWidth="127.0" style="-fx-background-color: e2e2e2;" text="Label" />
+                  <Label layoutX="135.0" layoutY="253.0" prefHeight="17.0" prefWidth="379.0" style="-fx-background-color: e2e2e2;" text="Label" />
                   <Button layoutX="441.0" layoutY="165.0" mnemonicParsing="false" text="Ver Tutor">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
+                  <Label layoutX="282.0" layoutY="223.0" text="Fecha Fin">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="345.0" layoutY="223.0" prefHeight="17.0" prefWidth="170.0" style="-fx-background-color: e2e2e2;" text="Label" />
                </children>
             </Pane>
             <Button layoutX="259.0" layoutY="349.0" mnemonicParsing="false" text="Regresar">
