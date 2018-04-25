@@ -23,32 +23,33 @@ public class LoginBecario extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
+//        Button btn = new Button();
+//        btn.setText("Say 'Hello World'");
+//        btn.setOnAction(new EventHandler<ActionEvent>() {
+//            
+//            @Override
+//            public void handle(ActionEvent event) {
+//                System.out.println("Hello World!");
+//            }
+//        });
+//        
+//        StackPane root = new StackPane();
+//        root.getChildren().add(btn);
+//        
+//        Scene scene = new Scene(root, 300, 250);
+//        
+//        primaryStage.setTitle("Hello World!");
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        
-        Scene scene = new Scene(root, 300, 250);
-        
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        
-        /**Codigo para ejecutar un nuevo fxml
-        Parent root = FXMLLoader.load(getClass().getResource("NewLogin.fxml"));
-        
+        //Codigo para ejecutar un el fxml de donde empezaras
+        //Iniciando en Login_user.fxml
+        Parent root = FXMLLoader.load(getClass().getResource("Login_user.fxml"));
         Scene scene = new Scene(root);
         
         primaryStage.setScene(scene);
-        primaryStage.show();*/
+        primaryStage.show();
+        
     }
 
     /**
