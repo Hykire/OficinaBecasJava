@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import com.jfoenix.controls.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.util.*?>
-<?import javafx.scene.input.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Login_userController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Login_userController">
      <children>
       <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2A4867;">
          <children>
-            <JFXTextField focusColor="#d6d8dd" layoutX="288.0" layoutY="192.0" maxWidth="262.0" minWidth="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Usuario" unFocusColor="#fcf9f9" />
-            <JFXPasswordField layoutX="288.0" layoutY="242.0" maxWidth="262.0" minWidth="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Contraseña" unFocusColor="#f2f2f2" />
+            <JFXTextField focusColor="#72cfff" layoutX="288.0" layoutY="192.0" maxWidth="262.0" minWidth="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Usuario" style="-fx-background-color: WHITE; color: WHITE;" unFocusColor="#6e52d3" />
+            <JFXPasswordField blendMode="LIGHTEN" focusColor="#72cfff" layoutX="288.0" layoutY="242.0" maxWidth="262.0" minWidth="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Contraseña" style="-fx-background-color: WHITE;" unFocusColor="#6e52d3">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></JFXPasswordField>
             <CheckBox layoutX="245.0" layoutY="302.0" mnemonicParsing="false" text="Recordarme" textFill="#f2ecec" />
             <JFXButton layoutX="498.0" layoutY="298.0" onAction="#loginButtonAction" style="-fx-background-color: #2458EE;" text="LOGIN" textFill="#f0eff5" />
             <Label layoutX="342.0" layoutY="341.0" opacity="0.84" text="Olvido su Contraseña ?" textFill="#fff9f9">
