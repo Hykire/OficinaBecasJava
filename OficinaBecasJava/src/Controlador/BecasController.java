@@ -30,8 +30,9 @@ public class BecasController implements Initializable {
         Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         Menu_stage.setScene(Menu_scene);
         Menu_stage.show();
-     
    }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

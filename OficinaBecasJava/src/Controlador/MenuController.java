@@ -60,12 +60,12 @@ public class MenuController implements Initializable {
    }
 
    @FXML private void mouseRecomendacionClicked(MouseEvent event) throws IOException {
-              
+        /*      
         Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Login_usuario.fxml"));
         Scene Menu_scene = new Scene (loader);
         Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
+        Menu_stage.show();*/
      
    }
    @FXML private void mouseHome(MouseEvent event) throws IOException {
