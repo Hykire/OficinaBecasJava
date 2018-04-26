@@ -1,11 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.util.*?>
+<?import javafx.scene.input.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.MenuController">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.MenuController">
+    <children>
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2A4867;">
+         <children>
+            <Circle fill="#fefeff" layoutX="533.0" layoutY="272.0" radius="34.0" stroke="#f8f7f7" strokeType="INSIDE" />
+            <Circle fill="#fefeff" layoutX="66.0" layoutY="272.0" radius="34.0" stroke="#f8f7f7" strokeType="INSIDE" />
+            <Pane layoutX="-1.0" layoutY="2.0" prefHeight="146.0" prefWidth="600.0" style="-fx-background-color: #FBFDFF; -fx-border-color: #0A1B2A;">
+               <children>
+                  <ImageView fitHeight="94.0" fitWidth="285.0" layoutX="154.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes//logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="213.0" layoutY="111.0" prefHeight="27.0" prefWidth="168.0" text="OFICINA DE BECAS" textAlignment="CENTER" textFill="#0d3f70" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <SplitPane dividerPositions="0.48068669527896996" layoutX="134.0" layoutY="154.0" orientation="VERTICAL" prefHeight="235.0" prefWidth="329.0" style="-fx-background-color: #3D4747; -fx-border-color: FBFDFF;">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" prefHeight="108.0" prefWidth="325.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3D4747;">
+                                 <children>
+                                    <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="52.0" layoutY="9.0" onMouseClicked="#mouseMibecaClicked" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Imagenes/mi_beca.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXButton layoutX="57.0" layoutY="81.0" onMouseClicked="#mouseMibecaClicked" text="MI BECA" textFill="#f5f0f0">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3D4747;">
+                                 <children>
+                                     <ImageView id="imageDetalle" fitHeight="68.0" fitWidth="73.0" layoutX="38.0" layoutY="11.0" onMouseClicked="#mouseDetalleBecaClicked" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Imagenes/historial.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXButton layoutX="11.0" layoutY="81.0" onMouseClicked="#mouseDetalleBecaClicked" text="HISTORIAL DE BECAS" textFill="#f5eeee">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" prefHeight="117.0" prefWidth="325.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import java.lang.*?&gt;&lt;?import javafx.scene.layout.*?&gt;&lt;AnchorPane minHeight=&quot;0.0&quot; minWidth=&quot;0.0&quot; prefHeight=&quot;160.0&quot; prefWidth=&quot;100.0&quot; style=&quot;-fx-background-color: #3D4747;&quot; xmlns=&quot;http://javafx.com/javafx/8&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot; /&gt;;">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3D4747;">
+                                 <children>
+                                    <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="46.0" layoutY="18.0" onMouseClicked="#mouseTutorClicked" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Imagenes/tutor.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXButton layoutX="32.0" layoutY="87.0" onMouseClicked="#mouseTutorClicked" text="TUTOR A CARGO" textFill="#f8f5f5">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3D4747;">
+                                 <children>
+                                    <ImageView fitHeight="68.0" fitWidth="68.0" layoutX="41.0" layoutY="14.0" onMouseClicked="#mouseRecomendacionClicked" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Imagenes/recomendaciones.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXButton layoutX="15.0" layoutY="87.0" onMouseClicked="#mouseRecomendacionClicked" text="RECOMENDACIONES" textFill="#f2f2f2">
+                                       <font>
+                                          <Font name="Arial Narrow Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <ImageView fx:id="homeView" fitHeight="47.0" fitWidth="45.0" layoutX="44.0" layoutY="244.0" onMouseClicked="#mouseHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="closeview" fitHeight="47.0" fitWidth="47.0" layoutX="510.0" layoutY="248.0" onMouseClicked="#mouseClose" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/exit.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="49.0" layoutY="323.0" text="HOME" textFill="#fcfafa">
+               <font>
+                  <Font name="DFPOP1-W9" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="490.0" layoutY="323.0" text="CERRAR SESION" textFill="#fcfafa">
+               <font>
+                  <Font name="DFPOP1-W9" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
 </AnchorPane>
