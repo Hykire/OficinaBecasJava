@@ -15,22 +15,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import Vista.*;
 
-/*
+/**
+ * FXML Controller class
  *
  * @author JUNNIOR
  */
-public class MenuController implements Initializable {
-   
+public class Menu_PrincipalController implements Initializable {
+
     /**
      * Initializes the controller class.
      */
-    public ImageView homeView,closeView;
-    //@FXML private void 
-   @FXML private void mouseDetalleBecaClicked(MouseEvent event) throws IOException {
+     @FXML private void mouseDetalleBecaClicked(MouseEvent event) throws IOException {
               
         Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Becas.fxml"));
         Scene Menu_scene = new Scene (loader);
@@ -68,25 +65,9 @@ public class MenuController implements Initializable {
         Menu_stage.show();*/
      
    }
-   @FXML private void mouseHome(MouseEvent event) throws IOException {
-              
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu.fxml"));
-        Scene Menu_scene = new Scene (loader);
-        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
-     
-   }
-   
-   @FXML private void mouseClose(MouseEvent event) throws IOException {
-        
-   }
-  
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-           
     
 }

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+<AnchorPane id="Principal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Menu_PrincipalController">
+   <children>
+      <AnchorPane id="Header" prefHeight="144.0" prefWidth="611.0">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="251.0" layoutX="182.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                    <Image url="@../Imagenes/logo.png" />
+               </image>
+            </ImageView>
+            <Label id="HeaderText" layoutX="222.0" layoutY="103.0" text="OFICINA DE BECAS" />
+            
+         </children>
+      </AnchorPane>
+      <AnchorPane id="Body" layoutY="144.0" prefHeight="272.0" prefWidth="611.0">
+         <children>
+            <Circle fill="WHITE" layoutX="548.0" layoutY="131.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
+            <AnchorPane layoutX="122.0" layoutY="31.0" prefHeight="211.0" prefWidth="368.0">
+               <children>
+                  <SplitPane dividerPositions="0.5342465753424658" layoutY="-5.0" orientation="VERTICAL" prefHeight="221.0" prefWidth="368.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="menuContent">
+                           <children>
+                              <SplitPane dividerPositions="0.5" prefHeight="114.0" prefWidth="368.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="menuContent">
+                                       <children>
+                                           <ImageView id="situacionActual" fitHeight="62.0" fitWidth="62.0" layoutX="59.0" layoutY="25.0" onMouseClicked="#mouseMibecaClicked" pickOnBounds="true" preserveRatio="true"> 
+                                                <image>
+                                                 <Image url="@../Imagenes/mi_beca.png" />
+                                                 </image>
+                                           </ImageView>
+                                          <Label layoutX="37.0" layoutY="90.0" onMouseClicked="#mouseMibecaClicked" styleClass="menuText" text="SITUACION ACTUAL" />
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="129.0" prefWidth="254.0" styleClass="menuContent">
+                                       <children>
+                                           <ImageView id="historialBecas" fitHeight="62.0" fitWidth="62.0" layoutX="59.0" layoutY="25.0" onMouseClicked="#mouseDetalleBecaClicked" pickOnBounds="true" preserveRatio="true">
+                                                 <image>
+                                                    <Image url="@../Imagenes/historial.png" />
+                                                 </image>
+                                           </ImageView>
+                                          <Label layoutX="34.0" layoutY="90.0" onMouseClicked="#mouseDetalleBecaClicked" styleClass="menuText" text="HISTORIAL DE BECAS" />
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="83.0" prefWidth="366.0" styleClass="menuContent">
+                           <children>
+                               <ImageView id="recomendaciones" fitHeight="62.0" fitWidth="62.0" layoutX="152.0" layoutY="14.0" onMouseClicked="#mouseRecomendacionClicked" pickOnBounds="true" preserveRatio="true"> 
+                                       <image>
+                                          <Image url="@../Imagenes/recomendaciones.png" />
+                                       </image>
+                               </ImageView>
+                              <Label layoutX="127.0" layoutY="77.0" onMouseClicked="#mouseRecomendacionClicked" styleClass="menuText" text="RECOMENDACIONES" />
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="503.0" layoutY="172.0" styleClass="menuText" text="CERRAR SESION" />
+            <ImageView fitHeight="39.0" fitWidth="44.0" layoutX="529.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true"> 
+                <image>
+                  <Image url="@../Imagenes/exit.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+   <stylesheets>
+    <URL value="@../CSS/estilo_menu.css" />
+    </stylesheets>
+</AnchorPane>

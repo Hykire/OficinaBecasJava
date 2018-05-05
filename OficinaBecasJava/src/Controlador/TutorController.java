@@ -28,9 +28,9 @@ public class TutorController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML private void volverHome(ActionEvent event) throws IOException {
+    @FXML private void volverBecas(ActionEvent event) throws IOException {
               
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Becas.fxml"));
         Scene Menu_scene = new Scene (loader);
         Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         Menu_stage.setScene(Menu_scene);

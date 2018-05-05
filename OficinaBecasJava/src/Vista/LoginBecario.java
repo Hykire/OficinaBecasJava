@@ -10,7 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import Controlador.Login_usuarioController;
+
 /**
  *
  * @author MMiltonCM
@@ -18,12 +18,15 @@ import Controlador.Login_usuarioController;
 public class LoginBecario extends Application {
     
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage stage) throws Exception {
+      
         Parent root = FXMLLoader.load(getClass().getResource("Login_usuario.fxml"));
+    
         Scene scene = new Scene(root);
-        
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
         
     }
 
@@ -32,6 +35,7 @@ public class LoginBecario extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
     }
     
 }

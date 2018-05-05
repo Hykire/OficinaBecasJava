@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -53,7 +54,7 @@
                   <Label layoutX="135.0" layoutY="193.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" text="Label" />
                   <Label layoutX="135.0" layoutY="223.0" prefHeight="17.0" prefWidth="127.0" style="-fx-background-color: e2e2e2;" text="Label" />
                   <Label layoutX="135.0" layoutY="253.0" prefHeight="17.0" prefWidth="379.0" style="-fx-background-color: e2e2e2;" text="Label" />
-                  <Button layoutX="441.0" layoutY="165.0" mnemonicParsing="false" text="Ver Tutor">
+                  <Button layoutX="419.0" layoutY="165.0" mnemonicParsing="false" onAction="#verTutor" text="Ver Tutor">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -64,6 +65,11 @@
                      </font>
                   </Label>
                   <Label layoutX="345.0" layoutY="223.0" prefHeight="17.0" prefWidth="170.0" style="-fx-background-color: e2e2e2;" text="Label" />
+                  <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="500.0" layoutY="166.0" onMouseClicked="#mouseverTutorClicked" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Imagenes//tutor.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
             <Button layoutX="259.0" layoutY="349.0" mnemonicParsing="false" onAction="#volverHome" text="Regresar">

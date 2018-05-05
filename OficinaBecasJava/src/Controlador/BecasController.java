@@ -25,13 +25,30 @@ public class BecasController implements Initializable {
      */
     @FXML private void volverHome(ActionEvent event) throws IOException {
               
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu.fxml"));
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu_Principal.fxml"));
         Scene Menu_scene = new Scene (loader);
         Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         Menu_stage.setScene(Menu_scene);
         Menu_stage.show();
    }
-    
+     @FXML private void verTutor(ActionEvent event) throws IOException {
+              
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Tutor.fxml"));
+        Scene Menu_scene = new Scene (loader);
+        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        Menu_stage.setScene(Menu_scene);
+        Menu_stage.show();
+     
+   }
+       @FXML private void mouseverTutorClicked(MouseEvent event) throws IOException {
+              
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Tutor.fxml"));
+        Scene Menu_scene = new Scene (loader);
+        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+        Menu_stage.setScene(Menu_scene);
+        Menu_stage.show();
+     
+   }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

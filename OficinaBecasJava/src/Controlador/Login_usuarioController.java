@@ -16,8 +16,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-//import oficinabecasjava.OficinaBecasJava;
-
 
 /**
  * FXML Controller class
@@ -29,15 +27,14 @@ public class Login_usuarioController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML private void loginButtonAction(ActionEvent event) throws IOException {
-              
-        Parent Menu_Parent = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu.fxml"));
-        Scene Menu_scene = new Scene (Menu_Parent);
+    @FXML private void loginMenu(ActionEvent event) throws IOException{
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu_Principal.fxml"));
+        Scene Menu_scene = new Scene (loader);
         Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         Menu_stage.setScene(Menu_scene);
         Menu_stage.show();
-     
-   }
+        
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

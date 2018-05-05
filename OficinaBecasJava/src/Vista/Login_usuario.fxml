@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.paint.*?>
 <?import com.jfoenix.controls.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -12,58 +8,54 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.util.*?>
-<?import javafx.scene.input.*?>
-<?import Controlador.*?>
+<?import java.net.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Login_usuarioController">
-     <children>
-      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2A4867;">
+<AnchorPane id="Principal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Login_usuarioController">
+   <children>
+      <AnchorPane id="Header" prefHeight="144.0" prefWidth="611.0">
          <children>
-            <JFXTextField focusColor="#72cfff" layoutX="288.0" layoutY="192.0" maxWidth="262.0" minWidth="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Usuario" style="-fx-background-color: WHITE; color: WHITE;" unFocusColor="#6e52d3" />
-            <JFXPasswordField blendMode="LIGHTEN" focusColor="#72cfff" layoutX="288.0" layoutY="242.0" maxWidth="262.0" minWidth="215.0" prefHeight="31.0" prefWidth="262.0" promptText="Contraseña" style="-fx-background-color: WHITE;" unFocusColor="#6e52d3">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-            </JFXPasswordField>
-            <CheckBox layoutX="245.0" layoutY="302.0" mnemonicParsing="false" text="Recordarme" textFill="#f2ecec" />
-            <JFXButton layoutX="498.0" layoutY="298.0" onAction="#loginButtonAction" style="-fx-background-color: #2458EE;" text="LOGIN" textFill="#f0eff5" />
-            <Label layoutX="342.0" layoutY="341.0" opacity="0.84" text="Olvido su Contraseña ?" textFill="#fff9f9">
+            <ImageView fitHeight="75.0" fitWidth="251.0" layoutX="182.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                    <Image url="@../Imagenes/logo.png" />
+               </image>
+            </ImageView>
+            <Label id="HeaderText" layoutX="222.0" layoutY="103.0" text="OFICINA DE BECAS" />
+            
+         </children>
+      </AnchorPane>
+      <AnchorPane id="Body" layoutY="144.0" prefHeight="257.0" prefWidth="611.0">
+         <children>
+            <JFXTextField layoutX="281.0" layoutY="47.0" maxWidth="272.0" minWidth="240.0" prefHeight="31.0" prefWidth="248.0" promptText="Usuario" styleClass="login" />
+            <JFXPasswordField layoutX="281.0" layoutY="99.0" maxWidth="248.0" minWidth="240.0" prefHeight="31.0" prefWidth="248.0" promptText="Contraseña" styleClass="login" />
+            <CheckBox layoutX="252.0" layoutY="163.0" mnemonicParsing="false" text="Recordarme" textFill="#f5f5f5">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Label>
-            <ImageView fitHeight="41.0" fitWidth="27.0" layoutX="243.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+               </font></CheckBox>
+            <JFXButton id="loginButton" layoutX="474.0" layoutY="159.0" onAction="#loginMenu" text="LOGIN" />
+            <Label layoutX="342.0" layoutY="203.0" text="Olvido su Contraseña?" textFill="#fcf5f5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="237.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Imagenes/user.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="56.0" fitWidth="27.0" layoutX="243.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
-               <image>
+            <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="237.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true"> 
+             <image>
+                  <Image url="@../Imagenes/password.png" />
+               </image>
+            </ImageView>            
+            <ImageView fitHeight="137.0" fitWidth="137.0" layoutX="71.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true"> 
+            <image>
                   <Image url="@../Imagenes/login.png" />
                </image>
+            
             </ImageView>
-            <Pane layoutX="-1.0" layoutY="2.0" prefHeight="146.0" prefWidth="600.0" style="-fx-background-color: #FBFDFF; -fx-border-color: #0A1B2A;">
-               <children>
-                  <ImageView fitHeight="94.0" fitWidth="285.0" layoutX="154.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Imagenes//logo.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="213.0" layoutY="111.0" prefHeight="27.0" prefWidth="168.0" text="OFICINA DE BECAS" textAlignment="CENTER" textFill="#0d3f70" wrapText="true">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="51.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes//login.png" />
-               </image>
-            </ImageView>
-         </children></Pane>
+         </children></AnchorPane>
    </children>
+   <stylesheets>
+    <URL value="@../CSS/estilo_menu.css" />
+    </stylesheets>
 </AnchorPane>

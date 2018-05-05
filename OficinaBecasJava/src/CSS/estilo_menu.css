@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-may-2018, 22:25:44
+    Author     : JUNNIOR
+*/
+
+#Principal,#Body{
+    -fx-background-color:#2A4867;
+    
+}
+
+#Header{
+    -fx-background-color: white;
+    -fxborder-color: #0A1B2A;
+}
+#HeaderText{
+     -fx-text-align: center;
+     -fx-text-wrap: true;
+     -fx-font-family: Georgia;
+     -fx-font-size: 18px;
+     -fx-text-fill: #0d3f70;
+}
+.login{
+    -fx-background-color: white;
+    -fx-color: white;
+}
+#loginButton{
+    -fx-background-color:  #2458EE;
+    -fx-font-family: "System Bold";
+    -fx-text-fill: #f0eff5;
+    
+}
+
+.menuContent{
+    -fx-background-color:  #3C3C3F;
+    -fx-border-color: #0A1B2A;
+}
+
+.menuText{
+    -fx-font-family: "Calibri";
+    -fx-font-size: 14px;
+    -fx-text-fill: #f2f2f2;
+    -fx-text-wrap: true;
+}

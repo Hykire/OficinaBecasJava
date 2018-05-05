@@ -84,7 +84,7 @@
                   </Label>
                </children>
             </Pane>
-            <Button layoutX="256.0" layoutY="342.0" mnemonicParsing="false" onAction="#volverHome" text="Regresar">
+            <Button layoutX="256.0" layoutY="342.0" mnemonicParsing="false" onAction="#volverBecas" text="Regresar">
                <font>
                   <Font size="16.0" />
                </font>
