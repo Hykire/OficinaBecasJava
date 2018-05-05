@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+
+<AnchorPane id="RecomendacionesPrincipal" prefHeight="313.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.RecomendacionesController">
+   <children>
+      <Pane layoutX="-8.0" prefHeight="313.0" prefWidth="630.0">
+         <children>
+            <TitledPane layoutX="28.0" layoutY="32.0" prefHeight="210.0" prefWidth="595.0" text="CONVOCATORIA DE BECAS">
+               <content>
+                  <TableView prefHeight="184.0" prefWidth="617.0">
+                    <columns>
+                      <TableColumn prefWidth="72.0" text="Beca" />
+                      <TableColumn prefWidth="108.0" text="Inst. Financiadora" />
+                        <TableColumn prefWidth="86.0" text="Requisitos" />
+                        <TableColumn prefWidth="75.0" text="Beneficios" />
+                        <TableColumn text="Duracion" />
+                        <TableColumn prefWidth="88.0" text="Vacantes" />
+                        <TableColumn prefWidth="92.0" text="Disponible" />
+                    </columns>
+                  </TableView>
+               </content>
+            </TitledPane>
+            <Button layoutX="286.0" layoutY="261.0" mnemonicParsing="false" onAction="#volverHome" text="REGRESAR" />
+         </children></Pane>
+   </children>
+    <stylesheets>
+    <URL value="@../CSS/estilo_menu.css" />
+    </stylesheets>
+</AnchorPane>

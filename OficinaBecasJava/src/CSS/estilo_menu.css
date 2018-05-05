@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : JUNNIOR
 */
 
-#Principal,#Body{
+#Principal,#Body,#RecomendacionesPrincipal{
     -fx-background-color:#2A4867;
     
 }
@@ -35,6 +35,7 @@ and open the template in the editor.
     
 }
 
+
 .menuContent{
     -fx-background-color:  #3C3C3F;
     -fx-border-color: #0A1B2A;
@@ -46,3 +47,6 @@ and open the template in the editor.
     -fx-text-fill: #f2f2f2;
     -fx-text-wrap: true;
 }
+
+
+
