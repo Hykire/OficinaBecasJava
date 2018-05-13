@@ -18,6 +18,8 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
+import javafx.scene.image.ImageView;
+
 /**
  * FXML Controller class
  *
@@ -25,9 +27,8 @@ import javafx.stage.Stage;
  */
 public class TutorController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML private ImageView imagen;
+    
     @FXML private void volverBecas(ActionEvent event) throws IOException {
               
         Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Becas.fxml"));
@@ -39,7 +40,6 @@ public class TutorController implements Initializable {
    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }    
     
 }
