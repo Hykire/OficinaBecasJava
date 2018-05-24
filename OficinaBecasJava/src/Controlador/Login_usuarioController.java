@@ -5,6 +5,9 @@
  */
 package Controlador;
 
+import AccesoDatos.BecadoDA;
+import Modelo.Persona;
+import com.jfoenix.controls.JFXTextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,6 +18,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -22,22 +27,37 @@ import javafx.stage.Stage;
  *
  * @author JUNNIOR
  */
-public class Login_usuarioController implements Initializable {
+public class Login_usuarioController extends AnchorPane implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
-    @FXML private void loginMenu(ActionEvent event) throws IOException{
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu_Principal.fxml"));
-        Scene Menu_scene = new Scene (loader);
-        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
-        
+    @FXML
+    Label prueba;
+    @FXML
+    JFXTextField txtusuario;
+    @FXML
+    JFXTextField txtpass;
+
+    private BecadoDA becadoData;
+    public static int IDselec = 0;
+
+    @FXML
+    private void loginMenu(ActionEvent event) throws IOException {
+        /*becadoData = new BecadoDA();
+        String usuario = txtusuario.getText();
+        String pass = txtpass.getText();
+        Persona P = becadoData.buscarUsuario(usuario, pass);
+        if (P != null) {
+            IDselec = P.getIdPersona();*/
+            Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Menu_Principal.fxml"));
+            Scene Menu_scene = new Scene(loader);
+            Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Menu_stage.setScene(Menu_scene);
+            Menu_stage.show();
+        //}
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        becadoData = new BecadoDA();
+    }
+
 }
