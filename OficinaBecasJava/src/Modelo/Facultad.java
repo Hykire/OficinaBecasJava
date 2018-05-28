@@ -3,7 +3,7 @@ package Modelo;
 public class Facultad {
     private int idFacultad; //Puede ser string
     private String nombre;
-    private char pabellon;
+    private String pabellon;
     
     public int getIdFacultad() {
         return idFacultad;
@@ -13,7 +13,7 @@ public class Facultad {
         return nombre;
     }
 
-    public char getPabellon() {
+    public String getPabellon() {
         return pabellon;
     }
 
@@ -25,7 +25,7 @@ public class Facultad {
         this.nombre = nombre;
     }
 
-    public void setPabellon(char pabellon) {
+    public void setPabellon(String pabellon) {
         this.pabellon = pabellon;
     }
 }

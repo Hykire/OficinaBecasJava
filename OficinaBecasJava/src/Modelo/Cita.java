@@ -15,69 +15,58 @@ public class Cita {
 
     
 
-    private int idCita;
+    private int id_Cita;
+    private int id_Tutor;
+    private int id_Becado;
+     
     private Date fecha;
-    private String descripción;
+    private String observacion;
     private String Lugar;
-    
-    public Cita(){
-        
+
+    public int getId_Cita() {
+        return id_Cita;
     }
-    
-    /**
-     * @return the fecha
-     */
+
+    public void setId_Cita(int id_Cita) {
+        this.id_Cita = id_Cita;
+    }
+
+    public int getId_Tutor() {
+        return id_Tutor;
+    }
+
+    public void setId_Tutor(int id_Tutor) {
+        this.id_Tutor = id_Tutor;
+    }
+
+    public int getId_Becado() {
+        return id_Becado;
+    }
+
+    public void setId_Becado(int id_Becado) {
+        this.id_Becado = id_Becado;
+    }
+
     public Date getFecha() {
         return fecha;
     }
 
-    /**
-     * @param fecha the fecha to set
-     */
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
-    
-    /**
-     * @return the idCita
-     */
-    public int getIdCita() {
-        return idCita;
+
+    public String getObservacion() {
+        return observacion;
     }
 
-    /**
-     * @param idCita the idCita to set
-     */
-    public void setIdCita(int idCita) {
-        this.idCita = idCita;
+    public void setObservacion(String observacion) {
+        this.observacion = observacion;
     }
 
-   
-
-    /**
-     * @return the descripción
-     */
-    public String getDescripción() {
-        return descripción;
-    }
-
-    /**
-     * @param descripción the descripción to set
-     */
-    public void setDescripción(String descripción) {
-        this.descripción = descripción;
-    }
-
-    /**
-     * @return the Lugar
-     */
     public String getLugar() {
         return Lugar;
     }
 
-    /**
-     * @param Lugar the Lugar to set
-     */
     public void setLugar(String Lugar) {
         this.Lugar = Lugar;
     }

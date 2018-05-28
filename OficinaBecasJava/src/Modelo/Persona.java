@@ -10,30 +10,30 @@ package Modelo;
  * @author YoluG
  */
 public class Persona {
-    private int idPersona;
+    private int id_persona;
+    private int id_usuario;
     private String nombre;
     private String apellidos;
-    private String direccion;
-    private int dni;
     private int codigoPUCP;
+    private int dni;
     private String correo;
-    private String profesion;
     private String especialidad;
-    private long telfMovil;
-    private long telfCasa;
-    private TipoUsuario tipoUsuario;
-    private Usuario usuarioP;
+    private String telfMovil;
 
-    public Persona(){
-        
-    }
-    
-    public int getIdPersona() {
-        return idPersona;
+    public int getId_persona() {
+        return id_persona;
     }
 
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
+    public void setId_persona(int id_persona) {
+        this.id_persona = id_persona;
+    }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     public String getNombre() {
@@ -52,12 +52,12 @@ public class Persona {
         this.apellidos = apellidos;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public int getCodigoPUCP() {
+        return codigoPUCP;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setCodigoPUCP(int codigoPUCP) {
+        this.codigoPUCP = codigoPUCP;
     }
 
     public int getDni() {
@@ -68,28 +68,12 @@ public class Persona {
         this.dni = dni;
     }
 
-    public int getCodigoPUCP() {
-        return codigoPUCP;
-    }
-
-    public void setCodigoPUCP(int codigoPUCP) {
-        this.codigoPUCP = codigoPUCP;
-    }
-
     public String getCorreo() {
         return correo;
     }
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    public String getProfesion() {
-        return profesion;
-    }
-
-    public void setProfesion(String profesion) {
-        this.profesion = profesion;
     }
 
     public String getEspecialidad() {
@@ -100,38 +84,13 @@ public class Persona {
         this.especialidad = especialidad;
     }
 
-    public long getTelfMovil() {
+    public String getTelfMovil() {
         return telfMovil;
     }
 
-    public void setTelfMovil(long telfMovil) {
+    public void setTelfMovil(String telfMovil) {
         this.telfMovil = telfMovil;
     }
 
-    public long getTelfCasa() {
-        return telfCasa;
-    }
-
-    public void setTelfCasa(long telfCasa) {
-        this.telfCasa = telfCasa;
-    }
-
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
-    }
-
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
-    }
-
-    public Usuario getUsuarioP() {
-        return usuarioP;
-    }
-
-    public void setUsuarioP(Usuario usuarioP) {
-        this.usuarioP = usuarioP;
-    }
-    
-    
-
+   
 }

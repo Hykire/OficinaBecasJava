@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import Modelo.Persona;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +17,8 @@ import javafx.stage.Stage;
  * @author MMiltonCM
  */
 public class LoginBecario extends Application {
+    
+    public static Persona Becado;
     
     @Override
     public void start(Stage stage) throws Exception {

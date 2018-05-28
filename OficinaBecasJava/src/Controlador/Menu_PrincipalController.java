@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Vista.LoginBecario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +15,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -22,52 +25,58 @@ import javafx.stage.Stage;
  *
  * @author JUNNIOR
  */
-public class Menu_PrincipalController implements Initializable {
+public class Menu_PrincipalController extends AnchorPane implements Initializable {
 
     /**
      * Initializes the controller class.
      */
-     @FXML private void mouseDetalleBecaClicked(MouseEvent event) throws IOException {
-              
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Becas.fxml"));
-        Scene Menu_scene = new Scene (loader);
-        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
-     
-   }
-   
-   @FXML private void mouseMibecaClicked(MouseEvent event) throws IOException {
-              
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/SituacionActual.fxml"));
-        Scene Menu_scene = new Scene (loader);
-        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
-     
-   }
-   @FXML private void mouseTutorClicked(MouseEvent event) throws IOException {
-              
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Tutor.fxml"));
-        Scene Menu_scene = new Scene (loader);
-        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
-     
-   }
+    @FXML
+    Label txtsaludo;
 
-   @FXML private void mouseRecomendacionClicked(MouseEvent event) throws IOException {
-            
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Recomendaciones.fxml"));
-        Scene Menu_scene = new Scene (loader);
-        Stage Menu_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
+    @FXML
+    private void mouseSesionCerrar(MouseEvent event) throws IOException {
+        LoginBecario.Becado = null;
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Login_usuario.fxml"));
+        Scene Menu_scene = new Scene(loader);
+        Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Menu_stage.setScene(Menu_scene);
         Menu_stage.show();
-     
-   }
+    }
+
+    @FXML
+    private void mouseDetalleBecaClicked(MouseEvent event) throws IOException {
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Becas.fxml"));
+        Scene Menu_scene = new Scene(loader);
+        Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Menu_stage.setScene(Menu_scene);
+        Menu_stage.show();
+
+    }
+
+    @FXML
+    private void mouseMibecaClicked(MouseEvent event) throws IOException {
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/SituacionActual.fxml"));
+        Scene Menu_scene = new Scene(loader);
+        Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Menu_stage.setScene(Menu_scene);
+        Menu_stage.show();
+
+    }
+
+    @FXML
+    private void mouseRecomendacionClicked(MouseEvent event) throws IOException {
+        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Recomendaciones.fxml"));
+        Scene Menu_scene = new Scene(loader);
+        Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Menu_stage.setScene(Menu_scene);
+        Menu_stage.show();
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        txtsaludo.setText("Bienvenido " + LoginBecario.Becado.getNombre()
+                + " " + LoginBecario.Becado.getApellidos());
+    }
+
 }

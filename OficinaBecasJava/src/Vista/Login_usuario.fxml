@@ -27,7 +27,7 @@
       <AnchorPane id="Body" layoutY="144.0" prefHeight="257.0" prefWidth="611.0">
          <children>
             <JFXTextField fx:id="txtusuario" layoutX="281.0" layoutY="47.0" maxWidth="272.0" minWidth="240.0" prefHeight="31.0" prefWidth="248.0" promptText="Usuario" styleClass="login" />
-            <JFXPasswordField fx:id="txtpaass" layoutX="281.0" layoutY="99.0" maxWidth="248.0" minWidth="240.0" prefHeight="31.0" prefWidth="248.0" promptText="Contraseña" styleClass="login" />
+            <JFXPasswordField fx:id="txtpass" layoutX="281.0" layoutY="99.0" maxWidth="248.0" minWidth="240.0" prefHeight="31.0" prefWidth="248.0" promptText="Contraseña" styleClass="login" />
             <CheckBox layoutX="252.0" layoutY="163.0" mnemonicParsing="false" text="Recordarme" textFill="#f5f5f5">
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -54,7 +54,7 @@
                </image>
             
             </ImageView>
-            <Label fx:id="prueba" layoutX="90.0" layoutY="203.0" text="Label" />
+            <Label fx:id="txtrpta" layoutX="282.0" layoutY="137.0" prefHeight="17.0" prefWidth="244.0" textFill="WHITE" />
          </children></AnchorPane>
    </children>
    <stylesheets>

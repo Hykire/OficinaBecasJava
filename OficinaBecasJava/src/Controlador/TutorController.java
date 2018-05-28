@@ -71,13 +71,14 @@ public class TutorController extends AnchorPane implements Initializable {
             e.printStackTrace();
             System.out.println("Error en cargar imagen");
         }
+        /*
         tutorSeleccionado = TutorDatos.buscarTutor(idTutor);
         txtnombre.setText(" " + tutorSeleccionado.getNombre());
         txtapellidos.setText(" " + tutorSeleccionado.getApellidos());
         txtprofesion.setText(" " + tutorSeleccionado.getProfesion());
         txtcelular.setText(" " + String.valueOf(tutorSeleccionado.getTelfMovil()));
         txtespecialidad.setText(" " + tutorSeleccionado.getEspecialidad());
-        txtcorreo.setText(" " + tutorSeleccionado.getCorreo());
+        txtcorreo.setText(" " + tutorSeleccionado.getCorreo());*/
     }
 
 }

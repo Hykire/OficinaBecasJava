@@ -10,11 +10,29 @@ package Modelo;
  * @author Yoluana
  */
 public class Usuario {
+    private int id_usuario;
+    private int id_tipo_usuario;
     private String usuario;
     private String pasword;
 
     public Usuario(){
         
+    }
+
+    public int getId_usuario() {
+        return id_usuario;
+    }
+
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
+    public int getId_tipo_usuario() {
+        return id_tipo_usuario;
+    }
+
+    public void setId_tipo_usuario(int id_tipo_usuario) {
+        this.id_tipo_usuario = id_tipo_usuario;
     }
     
     public String getUsuario() {

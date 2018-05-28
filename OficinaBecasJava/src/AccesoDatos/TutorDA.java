@@ -69,12 +69,12 @@ public class TutorDA {
                 String profesion = rs.getString("profesion");
                 String especialidad = rs.getString("especialidad");
                 int telf = rs.getInt("telefono");
-                tutor.setNombre(nombre);
+                /*tutor.setNombre(nombre);
                 tutor.setApellidos(apellidoP+" "+apellidoM);
                 tutor.setCorreo(correo);
                 tutor.setEspecialidad(especialidad);
                 tutor.setProfesion(profesion);
-                tutor.setTelfMovil(telf);
+                tutor.setTelfMovil(telf);*/
             }
             con.close();
         } catch (Exception e) {

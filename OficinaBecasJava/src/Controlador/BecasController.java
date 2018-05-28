@@ -50,17 +50,6 @@ public class BecasController extends AnchorPane implements Initializable {
         Menu_stage.show();
     }
 
-    @FXML
-    private void mouseverTutorClicked(MouseEvent event) throws IOException {
-        tutorDatos.cargarImagenTutor(2);
-        TutorDA.idSeleccionado = 2;
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Tutor.fxml"));
-        Scene Menu_scene = new Scene(loader);
-        Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
-    }
-
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         tutorDatos = new TutorDA();

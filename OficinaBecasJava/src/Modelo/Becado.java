@@ -7,72 +7,51 @@ package Modelo;
 public class Becado {
 
     private int id_becado;
-    private String nombreApoderado;
-    private String dirPadre;
-    private String telefPadre;
-    private String correoPadre;
-    private String expediente;
-    private String estadoDebe;
+    private int id_persona;
+    private int id_especialidad_ingreso;
+    private String ciclo_ingreso;
+    private String tipo_grupo;
 
-    public Becado() {
-    }
-    
-    public int getId_becado(){
+    public int getId_becado() {
         return id_becado;
     }
-    
-    
-    public void setId_becado(int id_becado){
+
+    public void setId_becado(int id_becado) {
         this.id_becado = id_becado;
     }
-    
-    public String getNombreApoderado() {
-        return nombreApoderado;
+
+    public int getId_persona() {
+        return id_persona;
     }
 
-    public void setNombreApoderado(String nombreApoderado) {
-        this.nombreApoderado = nombreApoderado;
+    public void setId_persona(int id_persona) {
+        this.id_persona = id_persona;
     }
 
-    public String getDirPadre() {
-        return dirPadre;
+    public int getId_especialidad_ingreso() {
+        return id_especialidad_ingreso;
     }
 
-    public void setDirPadre(String dirPadre) {
-        this.dirPadre = dirPadre;
+    public void setId_especialidad_ingreso(int id_especialidad_ingreso) {
+        this.id_especialidad_ingreso = id_especialidad_ingreso;
     }
 
-    public String getTelefPadre() {
-        return telefPadre;
+    public String getCiclo_ingreso() {
+        return ciclo_ingreso;
     }
 
-    public void setTelefPadre(String telefPadre) {
-        this.telefPadre = telefPadre;
+    public void setCiclo_ingreso(String ciclo_ingreso) {
+        this.ciclo_ingreso = ciclo_ingreso;
     }
 
-    public String getCorreoPadre() {
-        return correoPadre;
+    public String getTipo_grupo() {
+        return tipo_grupo;
     }
 
-    public void setCorreoPadre(String correoPadre) {
-        this.correoPadre = correoPadre;
+    public void setTipo_grupo(String tipo_grupo) {
+        this.tipo_grupo = tipo_grupo;
     }
 
-    public String getExpediente() {
-        return expediente;
-    }
-
-    public void setExpediente(String expediente) {
-        this.expediente = expediente;
-    }
-
-    public String getEstadoDebe() {
-        return estadoDebe;
-    }
-
-    public void setEstadoDebe(String estadoDebe) {
-        this.estadoDebe = estadoDebe;
-    }
     
     
 }
