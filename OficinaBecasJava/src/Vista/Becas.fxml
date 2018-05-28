@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,45 +33,32 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Label layoutX="23.0" layoutY="223.0" text="Fecha Inicio:">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="24.0" layoutY="253.0" text="Inst. Financiadora:">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Label>
-                  <TableView fx:id="dgv" layoutX="24.0" layoutY="22.0" prefHeight="130.0" prefWidth="495.0" style="-fx-border-color: #2A4867; -fx-background-color: WHITE;">
+                  <TableView fx:id="dgv" layoutX="24.0" layoutY="22.0" onMouseClicked="#mouseClicked" prefHeight="130.0" prefWidth="495.0" style="-fx-border-color: #2A4867; -fx-background-color: WHITE;">
                     <columns>
-                      <TableColumn prefWidth="62.0" style="color: BLUE;" text="Ciclo" />
-                      <TableColumn prefWidth="78.0" text="Beca" />
-                        <TableColumn prefWidth="89.0" text="Entidad" />
-                        <TableColumn prefWidth="137.0" text="Observaciones" />
-                        <TableColumn prefWidth="96.0" text="Tutor" />
+                      <TableColumn fx:id="columnaCiclo" prefWidth="91.0" style="color: BLUE;" text="Ciclo" />
+                      <TableColumn fx:id="columnaBeca" prefWidth="117.0" text="Beca" />
+                        <TableColumn fx:id="columnaEntidad" prefWidth="104.0" text="Entidad" />
+                        <TableColumn fx:id="columnaTutor" prefWidth="139.0" text="Tutor" />
                     </columns>
                   </TableView>
-                  <Label layoutX="135.0" layoutY="163.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" />
-                  <Label layoutX="135.0" layoutY="193.0" prefHeight="17.0" prefWidth="268.0" style="-fx-background-color: e2e2e2;" />
-                  <Label layoutX="135.0" layoutY="223.0" prefHeight="17.0" prefWidth="127.0" style="-fx-background-color: e2e2e2;" />
-                  <Label layoutX="135.0" layoutY="253.0" prefHeight="17.0" prefWidth="379.0" style="-fx-background-color: e2e2e2;" />
-                  <Button layoutX="419.0" layoutY="165.0" mnemonicParsing="false" onAction="#verTutor" text="Ver Tutor">
+                  <Button layoutX="417.0" layoutY="157.0" mnemonicParsing="false" onAction="#verTutor" prefHeight="17.0" prefWidth="78.0" text="Ver Tutor">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Label layoutX="282.0" layoutY="223.0" text="Fecha Fin">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="345.0" layoutY="223.0" prefHeight="17.0" prefWidth="170.0" style="-fx-background-color: e2e2e2;" />
-                  <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="500.0" layoutY="166.0" onMouseClicked="#mouseverTutorClicked" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="500.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../Imagenes//tutor.png" />
                      </image>
                   </ImageView>
+                  <TextArea fx:id="txtdescripcion" layoutX="134.0" layoutY="194.0" prefHeight="45.0" prefWidth="379.0" />
+                  <TextField fx:id="txtnombre" layoutX="135.0" layoutY="159.0" prefHeight="25.0" prefWidth="270.0" />
+                  <TextField fx:id="txtentidad" layoutX="135.0" layoutY="249.0" prefHeight="25.0" prefWidth="379.0" />
                </children>
             </Pane>
             <Button layoutX="259.0" layoutY="349.0" mnemonicParsing="false" onAction="#volverHome" text="Regresar">

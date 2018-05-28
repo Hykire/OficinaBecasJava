@@ -1,19 +1,31 @@
 package Modelo;
 
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  *
  * @author MMiltonCM
  */
 public class BecaRequest {
+    //private SimpleStringProperty st;
     private String Ciclo;
     private int idBeca;
     private String BecaN;
     private String Entidad;
-    private String Observaciones;
+    private int idTutor;
     private String Tutor;
+    private String Descripcion;
 
     public String getCiclo() {
         return Ciclo;
+    }
+
+    public String getDescripcion() {
+        return Descripcion;
+    }
+
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
     }
 
     public void setCiclo(String Ciclo) {
@@ -44,12 +56,12 @@ public class BecaRequest {
         this.Entidad = Entidad;
     }
 
-    public String getObservaciones() {
-        return Observaciones;
+    public int getIdTutor() {
+        return idTutor;
     }
 
-    public void setObservaciones(String Observaciones) {
-        this.Observaciones = Observaciones;
+    public void setIdTutor(int idTutor) {
+        this.idTutor = idTutor;
     }
 
     public String getTutor() {

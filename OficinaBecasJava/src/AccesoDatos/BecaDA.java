@@ -1,19 +1,22 @@
 package AccesoDatos;
 
+import Modelo.Beca;
 import Modelo.BecaRequest;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 /**
  *
  * @author MMiltonCM
  */
 public class BecaDA {
-    public ArrayList<BecaRequest> listarBecas(int persona){
-        ArrayList<BecaRequest> becas = new ArrayList<BecaRequest>();    
+    public ObservableList<BecaRequest> listarBecas(int persona){
+        ObservableList<BecaRequest> becas = FXCollections.observableArrayList();
         String driverName = "com.mysql.jdbc.Driver";
         String urlDB = "jdbc:mysql://quilla.lab.inf.pucp.edu.pe/";
         String dbName = "inf282g6";
@@ -24,26 +27,22 @@ public class BecaDA {
             Class.forName(driverName);
             con = DriverManager.getConnection(urlDB + dbName, userName, password);
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select S.ciclo_solicitud, B.id_beca, B.nombre_beca, P.nombre, P.ape_pa, B.Financiador " +
-                                            "from inf282g6.Beca B, inf282g6.SolicitudBeca S, inf282g6.Becado_x_Tutor BT,"
-                                            + " inf282g6.Becado C, inf282g6.Tutor T, inf282g6.Persona P " +
-                                              "where BT.idBecado=C.id_Becado AND "
-                                            + "BT.idTutor = T.id_tutor AND P.id_Persona=T.persona"
-                                            + " AND P.id_Persona="+persona+" ;");
+            ResultSet rs = st.executeQuery("SELECT BC.NOMBRE_BECA, BC.FINANCIADOR, P.NOMBRES, "
+                    + "P.APELLIDOS, T.ID_TUTOR, BC.ID_BECA, BXB.CICLO, BC.DESCRIPCION FROM inf282g6.BECADO BD, "
+                    + "inf282g6.BECA BC, inf282g6.TUTOR T, inf282g6.BECADO_X_BECA BXB, "
+                    + "inf282g6.PERSONA P WHERE BXB.ID_BECADO=BD.ID_BECADO AND BXB.ID_TUTOR=T.ID_TUTOR AND"
+                    + " T.ID_PERSONA=P.ID_PERSONA AND BXB.ID_BECA=BC.ID_BECA AND BD.ID_PERSONA="+persona+";");
             while (rs.next()) {
                 BecaRequest br = new BecaRequest();
-                String ciclo = rs.getString("ciclo_solicitud");
-                int id = rs.getInt("id_beca");
-                String beca = rs.getString("nombre_beca");
-                String nombre = rs.getString("nombre");
-                String apellido = rs.getString("ape_pa");
-                String financiador = rs.getString("Financiador");
-                br.setCiclo(ciclo);
-                br.setIdBeca(id);
-                br.setBecaN(beca);
-                br.setEntidad(financiador);
-                br.setObservaciones("");
-                br.setTutor(nombre+apellido);
+                String nombre = rs.getString("NOMBRES");
+                String apellido = rs.getString("APELLIDOS");
+                br.setCiclo(rs.getString("CICLO"));
+                br.setIdBeca(rs.getInt("ID_BECA"));
+                br.setBecaN(rs.getString("NOMBRE_BECA"));
+                br.setEntidad(rs.getString("FINANCIADOR"));
+                br.setTutor(rs.getString("ID_TUTOR"));
+                br.setDescripcion(rs.getString("DESCRIPCION"));
+                br.setTutor(nombre+" "+apellido);
                 becas.add(br);
             }
             con.close();
@@ -52,4 +51,5 @@ public class BecaDA {
          }
         return becas;
     }
+    
 }
