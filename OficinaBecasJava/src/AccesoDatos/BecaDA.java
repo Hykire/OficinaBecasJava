@@ -28,7 +28,7 @@ public class BecaDA {
             con = DriverManager.getConnection(urlDB + dbName, userName, password);
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("SELECT BC.NOMBRE_BECA, BC.FINANCIADOR, P.NOMBRES, "
-                    + "P.APELLIDOS, T.ID_TUTOR, BC.ID_BECA, BXB.CICLO, BC.DESCRIPCION FROM inf282g6.BECADO BD, "
+                    + "P.APELLIDOS, BXB.ID_TUTOR, BC.ID_BECA, BXB.CICLO, BC.DESCRIPCION FROM inf282g6.BECADO BD, "
                     + "inf282g6.BECA BC, inf282g6.TUTOR T, inf282g6.BECADO_X_BECA BXB, "
                     + "inf282g6.PERSONA P WHERE BXB.ID_BECADO=BD.ID_BECADO AND BXB.ID_TUTOR=T.ID_TUTOR AND"
                     + " T.ID_PERSONA=P.ID_PERSONA AND BXB.ID_BECA=BC.ID_BECA AND BD.ID_PERSONA="+persona+";");
@@ -40,7 +40,7 @@ public class BecaDA {
                 br.setIdBeca(rs.getInt("ID_BECA"));
                 br.setBecaN(rs.getString("NOMBRE_BECA"));
                 br.setEntidad(rs.getString("FINANCIADOR"));
-                br.setTutor(rs.getString("ID_TUTOR"));
+                br.setIdTutor(rs.getInt("ID_TUTOR"));
                 br.setDescripcion(rs.getString("DESCRIPCION"));
                 br.setTutor(nombre+" "+apellido);
                 becas.add(br);

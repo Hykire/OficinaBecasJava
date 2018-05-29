@@ -1,7 +1,5 @@
 package Modelo;
 
-import javafx.beans.property.SimpleStringProperty;
-
 /**
  *
  * @author MMiltonCM

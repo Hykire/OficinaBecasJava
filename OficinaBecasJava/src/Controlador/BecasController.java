@@ -6,7 +6,6 @@ import Modelo.BecaRequest;
 import Vista.LoginBecario;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -16,7 +15,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -50,7 +48,7 @@ public class BecasController extends AnchorPane implements Initializable {
     @FXML
     TextField txtentidad;
 
-    private TutorDA tutorDatos;
+    public int seleccionado = -1;
     private BecaDA becaDatos;
 
     @FXML
@@ -61,6 +59,7 @@ public class BecasController extends AnchorPane implements Initializable {
             txtnombre.setText(br.getBecaN());
             txtdescripcion.setText(br.getDescripcion());
             txtentidad.setText(br.getEntidad());
+            seleccionado = br.getIdTutor();
         }
     }
 
@@ -75,19 +74,22 @@ public class BecasController extends AnchorPane implements Initializable {
 
     @FXML
     private void verTutor(ActionEvent event) throws IOException {
-        tutorDatos.cargarImagenTutor(2);
-        TutorDA.idSeleccionado = 2;
-        Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Tutor.fxml"));
-        Scene Menu_scene = new Scene(loader);
-        Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Menu_stage.setScene(Menu_scene);
-        Menu_stage.show();
+        if (seleccionado > 0) {
+            TutorDA.idSeleccionado = seleccionado;
+            Parent loader = FXMLLoader.load(getClass().getClassLoader().getResource("Vista/Tutor.fxml"));
+            Scene Menu_scene = new Scene(loader);
+            Stage Menu_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Menu_stage.setScene(Menu_scene);
+            Menu_stage.show();
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        tutorDatos = new TutorDA();
         becaDatos = new BecaDA();
+        txtnombre.editableProperty().set(false);
+        txtdescripcion.editableProperty().set(false);
+        txtentidad.editableProperty().set(false);
         ObservableList<BecaRequest> listaBecas = becaDatos.listarBecas(LoginBecario.Becado.getId_persona());
         columnaCiclo.setCellValueFactory(new PropertyValueFactory<>("Ciclo"));
         columnaBeca.setCellValueFactory(new PropertyValueFactory<>("BecaN"));
