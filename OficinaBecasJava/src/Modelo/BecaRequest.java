@@ -5,7 +5,6 @@ package Modelo;
  * @author MMiltonCM
  */
 public class BecaRequest {
-    //private SimpleStringProperty st;
     private String Ciclo;
     private int idBeca;
     private String BecaN;

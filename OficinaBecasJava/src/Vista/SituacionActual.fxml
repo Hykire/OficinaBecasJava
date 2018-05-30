@@ -20,7 +20,7 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <TableView layoutX="19.0" layoutY="96.0" prefHeight="106.0" prefWidth="563.0">
+      <TableView fx:id="tablasituacion" layoutX="19.0" layoutY="96.0" prefHeight="106.0" prefWidth="563.0">
          <columns>
             <TableColumn fx:id="colsansion" prefWidth="150.0" text="Sancion" />
             <TableColumn fx:id="coldescripcion" prefWidth="265.0" text="Descripcion" />
