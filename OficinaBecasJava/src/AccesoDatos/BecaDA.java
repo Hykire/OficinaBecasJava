@@ -27,11 +27,12 @@ public class BecaDA {
             Class.forName(driverName);
             con = DriverManager.getConnection(urlDB + dbName, userName, password);
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT BC.NOMBRE_BECA, BC.FINANCIADOR, P.NOMBRES, "
-                    + "P.APELLIDOS, BXB.ID_TUTOR, BC.ID_BECA, BXB.CICLO, BC.DESCRIPCION FROM inf282g6.BECADO BD, "
-                    + "inf282g6.BECA BC, inf282g6.TUTOR T, inf282g6.BECADO_X_BECA BXB, "
-                    + "inf282g6.PERSONA P WHERE BXB.ID_BECADO=BD.ID_BECADO AND BXB.ID_TUTOR=T.ID_TUTOR AND"
-                    + " T.ID_PERSONA=P.ID_PERSONA AND BXB.ID_BECA=BC.ID_BECA AND BD.ID_PERSONA="+persona+";");
+            ResultSet rs = st.executeQuery("SELECT BC.NOMBRE_BECA, BC.FINANCIADOR, BC.ID_BECA, BXB.CICLO, "
+                    + "BC.DESCRIPCION, P.NOMBRES, P.APELLIDOS, T.ID_TUTOR FROM inf282g6.BECADO_X_BECA BXB, "
+                    + "inf282g6.BECADO BD, inf282g6.BECA BC, inf282g6.TUTOR_X_BECADO TB, inf282g6.TUTOR T, "
+                    + "inf282g6.PERSONA P WHERE T.ID_PERSONA=P.ID_PERSONA AND BXB.ID_BECADO=TB.ID_BECADO AND "
+                    + "BXB.CICLO=TB.CICLO AND BXB.ID_BECA=BC.ID_BECA AND BXB.ID_BECADO=BD.ID_BECADO AND "
+                    + "TB.ID_TUTOR=T.ID_TUTOR AND BD.ID_PERSONA="+persona+";");
             while (rs.next()) {
                 BecaRequest br = new BecaRequest();
                 String nombre = rs.getString("NOMBRES");
