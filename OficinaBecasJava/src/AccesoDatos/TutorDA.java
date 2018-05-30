@@ -18,34 +18,6 @@ import java.sql.Statement;
 public class TutorDA {
 
     public static int idSeleccionado = 0;
-
-    public void cargarImagenTutor(int id) {
-        String driverName = "com.mysql.jdbc.Driver";
-        String urlDB = "jdbc:mysql://quilla.lab.inf.pucp.edu.pe/";
-        String dbName = "inf282g6";
-        String userName = "inf282g6";
-        String password = "Nk2ewy";
-        Connection con = null;
-        try {
-            Class.forName(driverName);
-            con = DriverManager.getConnection(urlDB + dbName, userName, password);
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("select data from Imagenes where idImagenes = " + id + ";");
-            while (rs.next()) {
-                InputStream in = rs.getBinaryStream(1);
-                OutputStream f = new FileOutputStream(new File("src/Imagenes/tutor" + id + ".jpg"));
-                int c = 0;
-                while ((c = in.read()) > -1) {
-                    f.write(c);
-                }
-                f.close();
-                in.close();
-            }
-            con.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     
     public Persona buscarTutor(int id){
         String driverName = "com.mysql.jdbc.Driver";

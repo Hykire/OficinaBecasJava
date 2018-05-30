@@ -44,7 +44,7 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="imagen" fitHeight="205.0" fitWidth="169.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">                     
+                  <ImageView fx:id="imagen" fitHeight="200.0" fitWidth="160.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">                     
                   </ImageView>
                   <TextField fx:id="txtnombre" editable="false" layoutX="357.0" layoutY="20.0" prefHeight="25.0" prefWidth="191.0" />
                   <TextField fx:id="txtapellidos" editable="false" layoutX="357.0" layoutY="60.0" prefHeight="25.0" prefWidth="191.0" />

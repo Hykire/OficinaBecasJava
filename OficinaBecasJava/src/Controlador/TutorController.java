@@ -24,7 +24,6 @@ import javafx.scene.layout.AnchorPane;
 public class TutorController extends AnchorPane implements Initializable {
 
     private TutorDA TutorDatos;
-    private Tutor tutorSeleccionado;
 
     @FXML
     private ImageView imagen;
@@ -54,14 +53,13 @@ public class TutorController extends AnchorPane implements Initializable {
         int idTutor = TutorDA.idSeleccionado;
         TutorDatos = new TutorDA();
         Persona tutor = TutorDatos.buscarTutor(idTutor);
-        /*try {
-            String urlImg = "Imagenes/tutor" + idTutor + ".jpg";
+        try {
+            String urlImg = "Imagenes/tutor" + idTutor + ".png";
             Image foto = new Image(urlImg);
             imagen.setImage(foto);
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error en cargar imagen");
-        }*/
+        }
         txtnombre.setText(" " + tutor.getNombre());
         txtapellidos.setText(" " + tutor.getApellidos());
         txtcelular.setText(" " + String.valueOf(tutor.getTelfMovil()));
